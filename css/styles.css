@@ -1,0 +1,108 @@
+:root{
+    --primary-pale-blue:hwb(225 88% 0%);
+    --primary-bright-blue:hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --opacity-primary-bright-blue:hsla(245, 75%, 52%, 0.65);
+    --ff-main:'Red Hat Display', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url('../images/pattern-background-desktop.svg'),var(--primary-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--ff-main);
+}
+.component{
+    max-width: 400px;
+    min-width: 320px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.illustration img{
+    max-width: 100%;
+}
+.resume{
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.resume .title{
+    font-weight: 900;
+    font-size: 1.7em;
+    color: var(--dark-blue);
+}
+.resume .description{
+    color: var(--desaturated-blue);
+}
+.item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: var(--very-pale-blue);
+    place-items: center;
+    padding: 1.2em;
+    border-radius: 13px;
+    margin-bottom: 2em;
+}
+.item .item_description{
+    justify-self: start;
+}
+.item .item_description p{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+.item_description p:first-child{
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+.item_description p:last-child{
+    color: var(--desaturated-blue);
+}
+
+.item a:visited,.item a{
+    font-weight: 900;
+    color:var(--primary-bright-blue);
+}
+.item a:hover{
+    text-decoration: none;
+    color: var(--opacity-primary-bright-blue);
+    
+}
+.resume button{
+    border: none;
+}
+.resume .btn_confirm{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: var(--primary-bright-blue);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.resume .btn_confirm:hover{
+    background-color: var(--opacity-primary-bright-blue);
+    cursor: pointer;
+}
+.resume .btn_cancel{
+    background-color: rgb(255, 255, 255);
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    margin-bottom: 2.3em;
+}
+.resume .btn_cancel:hover{
+    color: var(--dark-blue);
+    cursor: pointer;
+    
+}
