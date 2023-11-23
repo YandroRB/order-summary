@@ -1,5 +1,5 @@
 :root{
-    --primary-pale-blue:hwb(225 88% 0%);
+    --primary-pale-blue:hsl(225, 100%, 94%);
     --primary-bright-blue:hsl(245, 75%, 52%);
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
@@ -26,6 +26,7 @@ body{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0px 6px 20px 4px rgba(0,0,0,0.25);
 }
 .illustration img{
     max-width: 100%;
@@ -83,20 +84,21 @@ body{
 .resume .btn_confirm{
     display: block;
     width: 100%;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     border-radius: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
     background-color: var(--primary-bright-blue);
     color: rgb(255, 255, 255);
     font-weight: 700;
+    box-shadow: 0px 20px 30px 0px rgba(109,124,237,0.39);
 }
 .resume .btn_confirm:hover{
     background-color: var(--opacity-primary-bright-blue);
     cursor: pointer;
 }
 .resume .btn_cancel{
-    background-color: rgb(255, 255, 255);
+    background-color: inherit;
     color: var(--desaturated-blue);
     font-weight: 700;
     margin-bottom: 2.3em;
@@ -104,5 +106,13 @@ body{
 .resume .btn_cancel:hover{
     color: var(--dark-blue);
     cursor: pointer;
-    
+}
+
+@media(max-width:425px){
+    body{
+        background: url('../images/pattern-background-mobile.svg'),var(--primary-pale-blue);
+    }
+    .component{
+        max-width: 340px;
+    }
 }
